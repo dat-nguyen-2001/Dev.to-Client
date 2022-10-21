@@ -32,7 +32,7 @@ const calMinuteRead = (content: string) => {
 }
 
 const saveArticle = async(id: number) => {
-    await axios.put(`http://devtobackend.herokuapp.com/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
+    await axios.put(`http://localhost:4000/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
 }
 
 const articlesApi = {getArticles,getArticlesByTag, getArticlesBySearch, getArticlesByUser ,createArticle, calMinuteRead, saveArticle}
