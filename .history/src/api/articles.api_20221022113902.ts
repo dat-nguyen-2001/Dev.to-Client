@@ -22,7 +22,7 @@ const getArticlesByUser = async function (username: string) {
 
 
 const createArticle = async function (title: string, content: string, tags: string, coverImage: string) {
-    await axios.post('https://devtobackend.herokuapp.com/articles/create', {title, content, tags, coverImage}, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
+    await axios.post('http://devtobackend.herokuapp.com/articles/create', {title, content, tags, coverImage}, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
 }
 
 const calMinuteRead = (content: string) => {
@@ -32,7 +32,7 @@ const calMinuteRead = (content: string) => {
 }
 
 const saveArticle = async(id: number) => {
-    await axios.put(`https://devtobackend.herokuapp.com/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
+    await axios.put(`http://devtobackend.herokuapp.com/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
 }
 
 const articlesApi = {getArticles,getArticlesByTag, getArticlesBySearch, getArticlesByUser ,createArticle, calMinuteRead, saveArticle}

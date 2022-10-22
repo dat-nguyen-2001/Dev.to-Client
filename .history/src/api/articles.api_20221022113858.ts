@@ -6,23 +6,23 @@ const getArticles = async () => {
 };
 
 const getArticlesByTag = async function (tag: string) {
-    const res = await axios.get(`https://devtobackend.herokuapp.com/articles?tag=${tag}`)
+    const res = await axios.get(`http://devtobackend.herokuapp.com/articles?tag=${tag}`)
     return res.data
 }
 
 const getArticlesBySearch = async function (search: string) {
-    const res = await axios.get(`https://devtobackend.herokuapp.com/articles?search=${search}`)
+    const res = await axios.get(`http://devtobackend.herokuapp.com/articles?search=${search}`)
     return res.data
 }
 
 const getArticlesByUser = async function (username: string) {
-    const res = await axios.get(`https://devtobackend.herokuapp.com/articles/${username}`)
+    const res = await axios.get(`http://devtobackend.herokuapp.com/articles/${username}`)
     return res.data
 }
 
 
 const createArticle = async function (title: string, content: string, tags: string, coverImage: string) {
-    await axios.post('https://devtobackend.herokuapp.com/articles/create', {title, content, tags, coverImage}, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
+    await axios.post('http://devtobackend.herokuapp.com/articles/create', {title, content, tags, coverImage}, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
 }
 
 const calMinuteRead = (content: string) => {
@@ -32,7 +32,7 @@ const calMinuteRead = (content: string) => {
 }
 
 const saveArticle = async(id: number) => {
-    await axios.put(`https://devtobackend.herokuapp.com/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
+    await axios.put(`http://devtobackend.herokuapp.com/articles/save/${id}`, {headers: {Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`}})
 }
 
 const articlesApi = {getArticles,getArticlesByTag, getArticlesBySearch, getArticlesByUser ,createArticle, calMinuteRead, saveArticle}
