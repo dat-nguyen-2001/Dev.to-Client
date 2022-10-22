@@ -176,7 +176,7 @@ const ArticlePage = () => {
                     {/* // Content wrapper */}
                     <div className='w-full overflow-x-hidden bg-white flex flex-col space-y-3 px-0 md:mt-0 rounded-lg md:mr-5 pb-10 lg:basis-[70%]'>
                         {article.coverImage !== "" && <img src={article.coverImage} className="border-b-[1px] w-auto rounded-t-md" />}
-                        <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer pl-5 pt-4'>
+                        <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer pl-5'>
                             <div className='w-8 h-8 rounded-full cursor-pointer'>
                                 <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='w-8 h-8 rounded-full' />
                             </div>

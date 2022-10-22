@@ -174,11 +174,11 @@ const ArticlePage = () => {
                         </div>
                     </div>
                     {/* // Content wrapper */}
-                    <div className='w-full overflow-x-hidden bg-white flex flex-col space-y-3 px-0 md:mt-0 rounded-lg md:mr-5 pb-10 lg:basis-[70%]'>
-                        {article.coverImage !== "" && <img src={article.coverImage} className="border-b-[1px] w-auto rounded-t-md" />}
-                        <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer pl-5 pt-4'>
+                    <div className='w-full overflow-x-hidden mt-[-20px] pt-5 bg-white flex flex-col space-y-3 px-3 md:mt-0 rounded-lg md:mr-5 pb-10 lg:basis-[70%]'>
+                        {article.coverImage !== "" && <img src={article.coverImage} className="border-b-[1px] w-auto w-8 h-8" />}
+                        <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer'>
                             <div className='w-8 h-8 rounded-full cursor-pointer'>
-                                <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='w-8 h-8 rounded-full' />
+                                <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full' />
                             </div>
                             <div className='font-semibold'><i>@{article.user.username}</i></div>
                         </a>
@@ -200,7 +200,7 @@ const ArticlePage = () => {
                             <h1 className='text-2xl font-bold'>Top Comments ({article.comments.length})</h1>
                             <div className='flex space-x-2'>
                                 <div className='w-8 h-8 rounded-full cursor-pointer'>
-                                    <img src={curUser !== null && curUser.profile_pic ? curUser.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full w-8 h-8' />
+                                    <img src={curUser !== null && curUser.profile_pic ? curUser.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full' />
                                 </div>
                                 <form className='w-full flex flex-col space-y-2 items-left'>
                                     <textarea {...register("content", { required: true })} onFocus={commentHandler} placeholder='Add to the discussion . . .' className='w-full h-[100px] px-3 pt-2 border-[#e5e5e5] border-[1px] rounded-md' />
@@ -212,7 +212,7 @@ const ArticlePage = () => {
                                     {comments.sort(function (a: any, b: any) { return new Date(b.created_at).getTime() - new Date(a.created_at).getTime() }).map(comment => (
                                         <div className='flex space-x-2' key={comment.id}>
                                             <a className='w-8 h-8 rounded-full cursor-pointer' href={`/${comment.user.username}`}>
-                                                <img src={comment.user.profile_pic ? comment.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full w-8 h-8' />
+                                                <img src={comment.user.profile_pic ? comment.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full' />
                                             </a>
                                             <div className='w-full px-3 py-2 border-[#e5e5e5] border-[1px] rounded-md flex flex-col space-y-2'>
                                                 <div className='flex space-x-3'>
@@ -232,7 +232,7 @@ const ArticlePage = () => {
                     <div className='hidden lg:inline sticky top-[80px] rounded-lg bg-white px-3 py-5 h-full xl:px-8 basis-[30%] z-[0]'>
                         <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer mb-3'>
                             <div className='w-8 h-8 rounded-full cursor-pointer'>
-                                <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full w-8 h-8' />
+                                <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full' />
                             </div>
                             <div className='font-semibold'><i>@{article.user.username}</i></div>
                         </a>

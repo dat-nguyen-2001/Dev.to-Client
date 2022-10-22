@@ -23,7 +23,9 @@ code {
 }
 
 .icon {
-  @apply w-9 h-9 hover:text-[blue]/70 hover:bg-[#e2e3f3] text-center cursor-pointer rounded py-1
+  /* hover:background-color: #e2e3f3; */
+  @apply w-9 h-9 hover:text-[blue]/70  text-center cursor-pointer rounded py-1
+  hover:bg-[#e2e3f3]
 }
 
 /* Custom search input */
@@ -54,21 +56,25 @@ code {
 }
 
 .dropMenu {
-  @apply cursor-pointer pl-5 py-3 rounded hover:bg-[#ebecfc] hover:text-[#7179cc] hover:underline
+  @apply cursor-pointer pl-5 py-3 rounded  hover:text-[#7179cc] hover:underline
+  hover:bg-[#ebecfc]
 }
 
 .aside_icon {
-  @apply cursor-pointer flex space-x-2 items-center mb-3 pl-5 ml-1 w-[220px] h-[40px] px-2 rounded-md hover:bg-[#3e51e0]/25 hover:text-[#3e51e0]/80 hover:underline
+  @apply cursor-pointer flex space-x-2 items-center mb-3 pl-5 ml-1 w-[220px] h-[40px] px-2 rounded-md hover:text-[#3e51e0]/80 hover:underline
+  hover:bg-[#3e51e0]/25
 }
 
 .social_icon {
-  @apply cursor-pointer flex h-9 w-9 pl-[0.4rem] ml-1 items-center rounded-md hover:bg-[#3e51e0]/25 hover:text-[#3e51e0]/80 
+  @apply cursor-pointer flex h-9 w-9 pl-[0.4rem] ml-1 items-center rounded-md  hover:text-[#3e51e0]/80 
+  hover:bg-[#3e51e0]/25
 }
 
 
 /* Custom the right sidebar */
 .right_side_div {
-  @apply bg-[#fafafa] px-5 py-2 border-[#ededed] border-[.4px] rounded-md mr-4
+  @apply  px-5 py-2 border-[#ededed] border-[.4px] rounded-md mr-4
+  bg-[#fafafa]
 }
 
 .right_side_h1 {

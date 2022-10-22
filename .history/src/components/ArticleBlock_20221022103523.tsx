@@ -63,7 +63,7 @@ const ArticleBlock = ({ article }: any) => {
     return (
         <div className="flex flex-col space-y-2 bg-white rounded-md mx-auto border-[#d3d3d3] border-[.2px] pb-4">
             {article.coverImage !== "" && <img src={article.coverImage} className='rounded-t-md w-auto md:h-[250px]' />}
-            <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer px-3 pt-3'>
+            <a href={`/${article.user.username}`} className='flex items-center space-x-1 cursor-pointer px-3 pb-1 '>
                 <div className='w-8 h-8 rounded-full cursor-pointer'>
                     <img src={article.user.profile_pic ? article.user.profile_pic : 'https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png'} className='rounded-full w-8 h-8' />
                 </div>
