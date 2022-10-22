@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 const getArticles = async () => {
-    const res = await axios.get('http://devtobackend.herokuapp.com/api/articles')
+    const res = await axios.get('http://devtobackend.herokuapp.com/articles')
     return res.data;
 };
 
