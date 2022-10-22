@@ -58,7 +58,7 @@ const ArticleBlock = ({ article }: any) => {
     useEffect(() => {
         getLikedArticles()
         .then(data => {
-            // setLikedArticles(data)
+            setLikedArticles(data)
         setIsLiked(data.includes(Number(article.id)))})
     },[])
 

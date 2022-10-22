@@ -56,9 +56,7 @@ const ArticleBlock = ({ article }: any) => {
     const minuteRead = calMinuteRead(article.content)
 
     useEffect(() => {
-        getLikedArticles()
-        .then(data => {
-            // setLikedArticles(data)
+        getLikedArticles().then(data => {setLikedArticles(data)
         setIsLiked(data.includes(Number(article.id)))})
     },[])
 
