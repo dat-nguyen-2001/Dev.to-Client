@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 async function getUserInfo (username: string) {
-    const user = await axios.get(`https://devtobackend.herokuapp.com/users/${username}`);
+    const user = await axios.get(`http://devtobackend.herokuapp.com/users/${username}`);
     return user;
 };
 

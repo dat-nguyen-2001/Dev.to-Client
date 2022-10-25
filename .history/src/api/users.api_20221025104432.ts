@@ -1,12 +1,12 @@
 const axios = require('axios').default;
 
 async function getUserInfo (username: string) {
-    const user = await axios.get(`https://devtobackend.herokuapp.com/users/${username}`);
+    const user = await axios.get(`http://devtobackend.herokuapp.com/users/${username}`);
     return user;
 };
 
 const signIn = async (email: string, password: string) => {
-    const res = await axios.post('https://devtobackend.herokuapp.com/users/signin', { email, password })
+    const res = await axios.post('http://devtobackend.herokuapp.com/users/signin', { email, password })
         .catch(() => {
             alert('Invalid credentials!');
             return null

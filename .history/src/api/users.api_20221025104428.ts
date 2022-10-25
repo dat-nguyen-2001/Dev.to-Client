@@ -1,12 +1,12 @@
 const axios = require('axios').default;
 
 async function getUserInfo (username: string) {
-    const user = await axios.get(`https://devtobackend.herokuapp.com/users/${username}`);
+    const user = await axios.get(`http://devtobackend.herokuapp.com/users/${username}`);
     return user;
 };
 
 const signIn = async (email: string, password: string) => {
-    const res = await axios.post('https://devtobackend.herokuapp.com/users/signin', { email, password })
+    const res = await axios.post('http://devtobackend.herokuapp.com/users/signin', { email, password })
         .catch(() => {
             alert('Invalid credentials!');
             return null
@@ -16,13 +16,13 @@ const signIn = async (email: string, password: string) => {
 };
 
 const signUp = async (email: string, password: string) => {
-    const result = await axios.post('https://devtobackend.herokuapp.com/users/signup', { email, password })
+    const result = await axios.post('http://devtobackend.herokuapp.com/users/signup', { email, password })
     if(!result) return false;
     return true;
 };
 
 const changeProfilePicture = async (username: string, url: string) => {
-    await axios.post('https://devtobackend.herokuapp.com/users/profile', {username, url})
+    await axios.post('http://devtobackend.herokuapp.com/users/profile', {username, url})
 }
 
 const likeArticle = async(articleId: number) => {
